@@ -47,20 +47,67 @@
   },
   {
     "ContainingType": "UserApi.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/User/{User_Delete}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "User_Delete",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserDto",
+        "Type": "UserApi.Models.Dto\u002BDeleteUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserApi.Controllers.UserController",
     "Method": "Put",
-    "RelativePath": "api/User/{azon}",
+    "RelativePath": "api/User/{User_Update}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "azon",
+        "Name": "User_Update",
         "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "updateUserDto",
         "Type": "UserApi.Models.Dto\u002BUpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "UserApi.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "UserApi.Controllers.UserController",
+    "Method": "GetById",
+    "RelativePath": "api/User/{UserFindById}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserFindById",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
