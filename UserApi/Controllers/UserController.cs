@@ -16,5 +16,14 @@ namespace UserApi.Controllers
                 return StatusCode(201, context.NewUsers.ToList());
             }
         }
+        
+        [HttpPost]
+        public ActionResult<User> Post()
+        {
+            using (var context = new UserDbContext())
+            {
+                return Ok();
+            }
+        }
     }
 }
