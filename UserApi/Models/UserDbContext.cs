@@ -4,6 +4,7 @@ namespace UserApi.Models
 {
     public class UserDbContext : DbContext
     {
+        public DbSet<User> NewUsers { get; set; } = null;
         public UserDbContext()
         {
 
@@ -21,6 +22,6 @@ namespace UserApi.Models
                 optionsBuilder.UseMySQL(conn);
             }
         }
-        public DbSet<User> NewUsers { get; set; } = null;
+
     }
 }
