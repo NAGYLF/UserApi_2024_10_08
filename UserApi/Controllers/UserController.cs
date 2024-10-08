@@ -55,16 +55,11 @@ namespace UserApi.Controllers
             }
         }
         [HttpDelete("{User_Delete}")]
-        public ActionResult<object> Delete(Guid User_Delete, DeleteUserDto updateUserDto)
+        public ActionResult<object> Delete(Guid User_Delete)
         {
             using (var conext = new UserDbContext())
             {
                 var existingUser = conext.NewUsers.FirstOrDefault(x => x.Id == User_Delete);
-
-                existingUser.Name = updateUserDto.Name;
-                existingUser.Age = updateUserDto.Age;
-                existingUser.License = updateUserDto.License;
-
                 conext.NewUsers.Remove(existingUser);
                 conext.SaveChanges();
                 return StatusCode(200,new {message = "Sikeres törles" });

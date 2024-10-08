@@ -57,11 +57,6 @@
         "Name": "User_Delete",
         "Type": "System.Guid",
         "IsRequired": true
-      },
-      {
-        "Name": "updateUserDto",
-        "Type": "UserApi.Models.Dto\u002BDeleteUserDto",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []
